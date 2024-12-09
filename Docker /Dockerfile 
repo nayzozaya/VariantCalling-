@@ -1,0 +1,16 @@
+FROM quay.io/refgenomics/docker-ubuntu:14.04
+
+MAINTAINER nayeli zozaya <nayelizozaya@gmail.com>
+
+RUN git clone https://github.com/lh3/bwa && \
+	
+
+RUN apt-get install -y cyvcf2
+
+# Convenience commands
+ADD .. /Scripts/Nayeli_SARS (2).ibynb Nayeli_SARS (2).ipynb 
+RUN chmod +x Nayeli_SARS (2).ibynb
+
+# Integration tests
+ADD test /tmp/test
+RUN bats /tmp/test
